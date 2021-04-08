@@ -2,15 +2,21 @@
 	font-family: 'Raleway';
 	src: url('static/Raleway-Medium.ttf');
 	font-style: normal;
-
 }
 
-ul {
-list-style-type: none;
-}
 
 *{
 	font-family: 'Raleway', "Arial Black", Arial;
+}
+
+.logo
+{
+	width: 97px;
+	height: 45px;
+}
+
+ul, ol {
+list-style-type: none;
 }
 
 h1
@@ -24,7 +30,7 @@ h2
 	font-size: 0.9em;
 }
 
-p
+p, data
 {
 	font-size: 0.8em
 }
@@ -34,9 +40,16 @@ p
 	display: flex;
 	justify-content: flex-end;
 	/*mettre en haut a droite*/
+
+}
+.navigation
+{
+	border: solid 2px;
+	border-color: rgba(255,255,255,0);
+	/*?????*/
 }
 
-.S
+.sing-up
 {
 	color: #0065FC;
 	font-weight: bold;
@@ -46,14 +59,23 @@ p
 	color:  #0065FC;
 }
 
-.filtres
+.liste-filtres
 {
 	display: flex;
 }
+
 nav li
 {
 	display: flex;
-	margin-right: 50px;
+	margin-right: 67px;
+}
+
+.nav :hover /*ne marche pas comme ça mais marche avec .nav, mais cela le fait aussi sur s'inscrire. une fois fonctionelle le texte descend lorsqu'on le survole.*/
+{
+	border-top: 2px solid #0065FC;
+	padding-top: 20px;
+	/*Décaler la bordure de 49px*/	 
+	/*?????*/
 }
 
 section li
@@ -61,7 +83,79 @@ section li
 	margin-left: 60px;
 }
 
-.F
+.filtres
 {
-	/*chercher pour coller Filtres a gauche de la page*/
+	display: flex;	
+	flex-wrap: wrap;
+	/*trouver un moyen de mettre sur la meme ligne*/
+}
+.filtre
+{
+	font-weight: bold;
+	font-size: 0.9em;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #F2F2F2;
+	padding: 17px 21px 16px 61px;
+	border-radius: 22px;
+}
+
+.en-tete
+{
+	display: flex;
+}
+
+.formulaire
+{
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #F2F2F2;
+	padding: 17px 107px 17px 69px;
+	border-radius: 15px;
+/*Pourquoi il change de forme (2 couleurs)?*/
+}
+
+.codex
+{
+	display: flex;
+	background-color: #F2F2F2;
+
+}
+
+ol
+{
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8em;
+}
+
+ol :hover
+{
+	text-decoration: underline;
+}
+
+.article-1
+{
+	background-color: #F2F2F2;
+	border-color: #F2F2F2;
+	border-width: 2px;
+	border-style: solid;
+	padding: 27px 560px 20px 38px;
+	border-radius: 17px;
+}
+
+#section
+{
+	display: flex;
+	flex-wrap: wrap;
+	/*text ce referme a cause de la largeur de la boite*/
+
+}
+
+#article
+{
+	display: flex;
+	flex-direction: row;
+	/*je ne sais pas si c'est normal mais je bloque ici, je ne trouve pas grand chose pour m'aider*/
 }

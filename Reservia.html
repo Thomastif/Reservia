@@ -6,41 +6,108 @@
 	</head>
 	<body>
 		<header>
-			<img src="images/logo/Reservia.png" alt="Logo Reservia"/> <!-- Voir avec mentor pour mettre image dans figure et nav dans fig caption pour mettre sur la meme ligne ou trouver autres métohde.
-			Voir aussi comment réduire taille image par code
-			Voir si la position de la balise image hors d'une autre balise like <p></p> est nécessaire ou non-->
+			<div class="en-tete">
+				<img class="logo" src="images/logo/Reservia.png" alt="Logo Reservia"/> 
+				<nav>
+					<ul class="nav"><!--Je mets la class nav pour ensuite déplacer le groupe avec flexbox-->
+						<li class="navigation">Hébergements</li>
+						<li class="navigation">Activités</li>
+						<li class="sing-up">S'inscrire</li>
+					</ul>
+				</nav>
+			</div>
 			<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 			<p>En plein centre vile ou en pleine nature</p>
-		</header>
-		<nav>
-			<ul class="nav"><!--Je mets la class nav pour ensuite déplacer le groupe avec flexbox-->
-				<li class="#">Hébergements</li>
-				<li class="#">Activités</li>
-				<li class="S">S'inscrire</li>
-			</ul>
-		</nav>
-		<section>
-			<h2>
+
+			<form method="post" action="traitement.php">
+				<p>
+					<label for="localisation"><!--mettre logo localisation et zone "recherche"--></label>
+					<input class="formulaire" type="text" name="ville" id="localisation" value="Marseille, France">
+				</p>
+			</form>
+			<div class="liste-filtres"><!--filtre, section ou header ??? SI SECTION <p class="info-recheche" DANS SECTION AUSSI-->
+				<h2>Filtres</h2>
 				<ul class="filtres">
-					<li class="F">Filtres</li>
-					<li class="$">Économique</li>
-					<li class="$">Familial</li>
-					<li class="$">Romantique</li>
-					<li class="$">Animaux autorisé</li>
+					<li class="filtre">Économique</li>
+					<li class="filtre">Familial</li>
+					<li class="filtre">Romantique</li>
+					<li class="filtre">Animaux autorisé</li>
 				</ul>
-			</h2>
-			<p>Plus de 500 logements sont disponibles dans cette ville</p>
-			<article>
-				<h1>Hébergements à Marseille</h1>
-				<h2 id="+">Afficher plus</h2> 
+			</div>
+			<!--ajouter le petit logo info dans <p>--><data value="500">Plus de 500 logements sont disponibles dans cette ville</data>
+		</header>
+		<br>
+		<section id="section">
+			<article id="article">
+				<div class="article-1">
+					<h1>Hébergements à Marseille</h1>
+					<dl>
+						<dt><!--image--></dt>
+						<dt>Auberge la Cannebière</dt>
+						<dd>Nuit a partir de <bold>25€</bold></dd>
+						<dd><!--4 logo étoiles pleine 1 vide--></dd>
+
+						<dt><!--image--></dt>
+						<dt>Hôtel du port</dt>
+						<dd>Nuit à partir de 52€</dd>
+						<dd><!--5p--></dd>
+
+						<dt><!--image--></dt>
+						<dt>Hôtel Les mouettes</dt>
+						<dd>Nuit à partire de 76€</dd>
+						<dd><!--4p 1v--></dd>
+
+						<dt><!--image--></dt>
+						<dt>Hôtel de la mer</dt>
+						<dd>Nuit à partire de 46€</dd>
+						<dd><!--3p 2v--></dd>
+
+						<dt><!--image--></dt>
+						<dt>Auberge Le Panier</dt>
+						<dd>Nuit à partire de <bold>23€</bold></dd>
+						<dd><!--4p 1v--></dd>
+
+						<dt><!--image--></dt>
+						<dt>Hôtel chez Amina</dt>
+						<dd>Nuit à partire de 96€</dd>
+						<dd><!--5p--></dd>
+					</dl>		
+					<h2 id="+">Afficher plus</h2> 
+				</div>
 			</article>
-			<aside>
+			<aside id="aside">
 				<h1>Les plus populaires</h1>
 			</aside>
 		</section>
 		<section>
 			<h1>Activité a Marseille</h1>
 		</section>
+		<footer>
+			<div class="codex">
+				<div class="a-propos">
+					<h2>A propos</h2>
+						<ol>
+							<li>Fonctionnement du site</li></br>
+							<li>Conditions générales de ventes</li>
+							<li>Données et confidentialité</li>
+						</ol>
+				</div>
+				<div class="hebergements">
+					<h2>Nos hébergements</h2>
+						<ol>
+							<li>Carte qualité</li>
+							<li>Soumettre votre hôtel</li>
+						</ol>
+				</div>
+				<div class="assistance">
+					<h2>Assistance</h2>
+						<ol>
+							<li>Centre d'aide</li>
+							<li>Nous contacter</li>
+						</ol>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
 <!--comment-->
