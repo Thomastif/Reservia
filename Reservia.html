@@ -9,7 +9,7 @@
 			<div class="en-tete">
 				<img class="logo" src="images/logo/Reservia.png" alt="Logo Reservia"/> 
 				<nav>
-					<ul class="nav"><!--Je mets la class nav pour ensuite déplacer le groupe avec flexbox-->
+					<ul class="menu-principal"><!--Je mets la class nav pour ensuite déplacer le groupe avec flexbox-->
 						<li class="navigation">Hébergements</li>
 						<li class="navigation">Activités</li>
 						<li class="sing-up">S'inscrire</li>
@@ -25,8 +25,11 @@
 					<input class="formulaire" type="text" name="ville" id="localisation" value="Marseille, France">
 				</p>
 			</form>
-			<div class="liste-filtres"><!--filtre, section ou header ??? SI SECTION <p class="info-recheche" DANS SECTION AUSSI-->
-				<h2>Filtres</h2>
+
+		</header>
+		<section id="global">
+			<div class="liste-filtres">
+				<h3>Filtres</h3>
 				<ul class="filtres">
 					<li class="filtre">Économique</li>
 					<li class="filtre">Familial</li>
@@ -34,58 +37,69 @@
 					<li class="filtre">Animaux autorisé</li>
 				</ul>
 			</div>
-			<!--ajouter le petit logo info dans <p>--><data value="500">Plus de 500 logements sont disponibles dans cette ville</data>
-		</header>
-		<br>
-		<section id="section">
-			<article id="article">
-				<div class="article-1">
-					<h1>Hébergements à Marseille</h1>
-					<dl>
-						<dt><!--image--></dt>
-						<dt>Auberge la Cannebière</dt>
-						<dd>Nuit a partir de <bold>25€</bold></dd>
-						<dd><!--4 logo étoiles pleine 1 vide--></dd>
+			<!--ajouter le petit logo info dans <p>--><p>Plus de 500 logements sont disponibles dans cette ville</p>
+			<article id="ville-recherche"> 
+			<!--div + id article utile ?--> 
 
-						<dt><!--image--></dt>
-						<dt>Hôtel du port</dt>
-						<dd>Nuit à partir de 52€</dd>
-						<dd><!--5p--></dd>
+					<h2>Hébergements à Marseille</h2>
+					<div class="Hebergements">
+						<figure class="resultat-recherche"><img src="images/small/Cannebière.jpg" alt="image Auberge la Cannebière" class="img-hebergement">
+							<figcaption>Auberge la Cannebière 
+								Nuit à partir de 25€
+								<!--4 logo étoiles pleine 1 vide--></figcaption>
+						</figure>
 
-						<dt><!--image--></dt>
-						<dt>Hôtel Les mouettes</dt>
-						<dd>Nuit à partire de 76€</dd>
-						<dd><!--4p 1v--></dd>
-
-						<dt><!--image--></dt>
-						<dt>Hôtel de la mer</dt>
-						<dd>Nuit à partire de 46€</dd>
-						<dd><!--3p 2v--></dd>
-
-						<dt><!--image--></dt>
-						<dt>Auberge Le Panier</dt>
-						<dd>Nuit à partire de <bold>23€</bold></dd>
-						<dd><!--4p 1v--></dd>
-
-						<dt><!--image--></dt>
-						<dt>Hôtel chez Amina</dt>
-						<dd>Nuit à partire de 96€</dd>
-						<dd><!--5p--></dd>
-					</dl>		
-					<h2 id="+">Afficher plus</h2> 
+					<figure class="resultat-recherche"><img src="images/small/Port.jpg" alt="image Hôtel du port" class="img-hebergement"></figure>
+					<figcaption>Hôtel du port 
+						Nuit à partir de 52€
+						<!--5p--></figcaption>
+					<figure class="resultat-recherche"><img src="images/small/Mouettes.jpg" alt="image Hôtel Les mouettes" class="img-hebergement"></figure>
+					<figcaption>Hôtel Les mouettes 
+						Nuit à partir de 76€
+						<!--4p 1v--></figcaption>
+					<figure class="resultat-recherche"><img src="images/small/La-Mer.jpg" alt="image Hôtel de la mer" class="img-hebergement"></figure>
+					<figcaption>Hôtel de la mer 
+						Nuit à partir de 46€
+						<!--3p 2v--></figcaption>
+					<figure class="resultat-recherche"><img src="images/small/Panier.jpg" alt="image Auberge Le Panier" class="img-hebergement"></figure>
+					<figcaption>Auberge Le Panier 
+						Nuit à partir de 23€
+						<!--4p 1v--></figcaption>
+					<figure class="resultat-recherche"><img src="images/small/Amina.jpg" alt="image Hôtel chez Amina" class="img-hebergement"></figure>
+					<figcaption>Hôtel chez Amina 
+						Nuit à partir de 96€
+						<!--5p--></figcaption>
+					<h3 id="Afficher-plus">Afficher plus</h3> 
 				</div>
 			</article>
-			<aside id="aside">
-				<h1>Les plus populaires</h1>
+			<aside id="plus-populaires">
+				<h2>Les plus populaires</h2>
+				<!--Ajouter logo populaires-->
+				<figure><img src="mettre image" alt="image Hôtel Le soleil du matin"></figure>
+				<figcaption>Hôtel Le soleil du matin
+					Nuit à partir de 126€
+
+					<!--5p--></figcaption>
+				<figure><img src="mettre image" alt="image Hôtel Le soleil du matin"></figure>
+				<figcaption>Au coeur de l'eau Chambres d'hôtes
+					Nuit à partir de 71€
+
+					<!--4p 1v--></figcaption>
+
+				<figure><img src="mettre image" alt="image Hôtel Tout bleu et Blanc"></figure>
+				<figcaption>Hôtel Tout bleu et Blanc
+					Nuit à partir de 68€
+
+					<!--4p 1v--></figcaption>	
 			</aside>
 		</section>
 		<section>
-			<h1>Activité a Marseille</h1>
+			<h2>Activité a Marseille</h2>
 		</section>
 		<footer>
 			<div class="codex">
 				<div class="a-propos">
-					<h2>A propos</h2>
+					<h3>A propos</h3>
 						<ol>
 							<li>Fonctionnement du site</li></br>
 							<li>Conditions générales de ventes</li>
@@ -93,14 +107,14 @@
 						</ol>
 				</div>
 				<div class="hebergements">
-					<h2>Nos hébergements</h2>
+					<h3>Nos hébergements</h3>
 						<ol>
 							<li>Carte qualité</li>
 							<li>Soumettre votre hôtel</li>
 						</ol>
 				</div>
 				<div class="assistance">
-					<h2>Assistance</h2>
+					<h3>Assistance</h3>
 						<ol>
 							<li>Centre d'aide</li>
 							<li>Nous contacter</li>
