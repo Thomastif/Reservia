@@ -1,18 +1,15 @@
+										
+																						/*POLICE ET COULEURS*/
+
+
 @font-face {
 	font-family: 'Raleway';
 	src: url('static/Raleway-Medium.ttf');
 	font-style: normal;
 }
 
-
 *{
 	font-family: 'Raleway', "Arial Black", Arial;
-}
-
-.logo
-{
-	width: 97px;
-	height: 45px;
 }
 
 ul, ol {
@@ -35,9 +32,47 @@ h3
 	font-size: 0.9em
 }
 
-p, data, 
+p, data 
 {
 	font-size: 0.8em
+}
+
+a
+{
+	color: black;
+	text-decoration: unset;
+}
+
+.logo-font
+{
+	color: #0065FC;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+																				
+
+																						/*EN-TETE*/
+
+
+.logo
+{
+	width: 97px;
+	height: 45px;
+}
+
+.en-tete
+{
+	display: flex;
+	justify-content: flex-start;
+
+}
+
+.en-tete :first-child
+{
+	justify-content: flex-end;
 }
 
 .menu-principal
@@ -53,17 +88,7 @@ p, data,
 	border-color: rgba(255,255,255,0);
 	padding-top: 20px; 	/*Décaler la bordure de 49px*/	
 	/*?????*/
-}
-
-.sing-up
-{
-	color: #0065FC;
-	font-weight: bold;
-}
-
-.liste-filtres
-{
-	display: flex;
+	margin-top: -22px; 
 }
 
 nav li
@@ -79,29 +104,14 @@ nav li
 	/*?????*/
 }
 
-
-.filtres
+.sing-up
 {
-	display: flex;	
-	flex-wrap: wrap;
-	/*trouver un moyen de mettre sur la meme ligne*/
-}
-.filtre
-{
+	color: #0065FC;
 	font-weight: bold;
-	font-size: 0.9em;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #D9D9D9;
-	padding: 17px 21px 16px 61px; /*remplacer par height width 1/1*/
-	border-radius: 22px;
-	margin-top: -20px;/*essayer de remplacer par flexbox*/
 }
 
-.en-tete
-{
-	display: flex;
-}
+																						/*FILTRES ET FORMULAIRE*/
+
 
 .formulaire
 {
@@ -113,6 +123,166 @@ nav li
 	border-radius: 15px;
 } /*modifier le focus, chercher comment faire*/
 /*Comme pour les filtres */
+
+.liste-filtres
+{
+	display: flex;
+}
+
+.filtres /*MODIF NOMS ???*/
+{
+	display: flex;	
+	flex-wrap: wrap;
+	/*trouver un moyen de mettre sur la meme ligne*/
+}
+
+.filtre /*MODIF NOMS ???*/
+{
+	font-weight: bold;
+	font-size: 0.9em;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #D9D9D9;
+	padding: 17px 21px 16px 61px; /*remplacer par height width 1/1*/
+	border-radius: 22px;
+	margin-top: -20px;/*essayer de remplacer par flexbox*/
+}
+
+																						/*HEBERGEMENTS*/
+
+
+#ville-recherche, #plus-populaires
+{
+	background-color: #F2F2F2;
+	padding: 27px 0px 20px 38px; 
+	border-radius: 17px;
+
+}
+
+#ville-recherche
+{
+	width: 61.11%;
+	height: 33.23%;
+}
+
+.img-hebergement
+{
+	width: 236px;
+	height: 114px;
+	border-top-right-radius: 14px;
+	border-top-left-radius: 14px;
+	object-fit: cover;
+}
+
+.Hebergements
+{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.resultat-recherche
+{
+	margin-left: -5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	width: 246px;
+	height: 199px;
+	border-radius: 16px;
+	background-color: white;
+}
+
+.description-hebergement
+{
+	margin-left: -100px;
+}
+
+.Afficher-plus :hover
+{
+	text-decoration: underline;
+}
+
+
+																						/*HEBERGEMENTS POPULAIRES*/
+
+
+#plus-populaires
+{
+	margin-left: 40px;
+	width: 29.17%;
+	height: 33.23%;
+}
+
+.img-plus-populaire
+{
+	width: 127px;
+	height: 134px;
+	border-top-left-radius: 13px;
+	border-bottom-left-radius: 13px;
+	object-fit: cover;
+}
+
+.resultat-populaires
+{
+	display: flex;
+	align-items: center;
+	width: 343px;
+	height: 144px;
+	border-radius: 17px;
+	background-color: white;
+	margin-left: 0px;
+}
+
+
+																						/*ACTIVITES*/
+
+
+.resultat-activites
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.img-activites-grandes
+{
+	width: 303px;
+	height: 390px;
+	object-fit: cover;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.img-activites-fin-page
+{
+	width: 302px;
+	height: 140px;
+	object-fit: cover;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.img-activites-moyenne
+{
+	width: 302px;
+	height: 179px;
+	object-fit: cover;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.img-activites-petite
+{
+	width: 302px;
+	height: 109px;
+	object-fit: cover;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+
+																						/*BAS DE PAGE*/
 
 
 .codex
@@ -132,41 +302,4 @@ ol
 ol :hover
 {
 	text-decoration: underline;
-}
-
-.Hebergements, #plus-populaires
-{
-	background-color: #F2F2F2;
-	border-color: #F2F2F2;
-	border-width: 2px;
-	border-style: solid;
-	padding: 27px 20px 20px 38px; 
-	border-radius: 17px;
-
-}
-
-
-#ville-recherche 
-{
-
-}
-
-#plus-populaires
-{
-	margin-left: 40px;
-}
-
-.img-hebergement
-{
-	width: 236px;
-	height: 114px;
-	border-top-right-radius: 14px;
-	border-top-left-radius: 14px;
-}
-.Hebergements
-{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-
 }
