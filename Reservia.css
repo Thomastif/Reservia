@@ -43,14 +43,19 @@ a
 	text-decoration: unset;
 }
 
-.logo-font
-{
-	color: #0065FC;
-}
-
 .bold
 {
 	font-weight: bold;
+}
+
+header
+{
+	margin-left: 47px;
+}
+
+section
+{
+	margin-left: 47px;
 }
 																				
 
@@ -66,13 +71,8 @@ a
 .en-tete
 {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 
-}
-
-.en-tete :first-child
-{
-	justify-content: flex-end;
 }
 
 .menu-principal
@@ -119,10 +119,25 @@ nav li
 	border-style: solid;
 	border-width: 1px;
 	border-color: #F2F2F2;
-	padding: 17px 107px 17px 69px;
+	padding: 14px 77px 14px 69px; /*METTRE EN width/height*/
 	border-radius: 15px;
-} /*modifier le focus, chercher comment faire*/
-/*Comme pour les filtres */
+}
+
+.formulaire:focus
+{
+	border-color: blue;
+}
+
+.Recherche
+{
+	font-weight: bold;
+	color: white;
+	background-color: #0065FC;
+	padding: 14px 17px 14px 17px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	
+}
 
 .liste-filtres
 {
@@ -143,13 +158,92 @@ nav li
 	border-width: 2px;
 	border-style: solid;
 	border-color: #D9D9D9;
-	padding: 17px 21px 16px 61px; /*remplacer par height width 1/1*/
-	border-radius: 22px;
+	border-radius: 30px;
 	margin-top: -20px;/*essayer de remplacer par flexbox*/
+	padding-right: 30px;
+}
+
+.fa-map-marker-alt
+{
+	font-size: 18px;
+	background-color: #F2F2F2;
+	padding: 11px 14px 15px 14px;
+
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+.fa-info
+{
+	font-size: 12px;
+	color: #0065FC;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #D9D9D9;
+	border-radius: 25px;
+	padding: 5px 9px 5px 8px;
+}
+
+.fa-money-bill-wave
+{
+	font-size: 17px;
+	color: #0065FC;
+	background-color : #DEEBFF; 
+	padding: 16px 16px 18px 16px;
+	border-radius: 25px;
+}
+
+.fa-child
+{
+	font-size: 21px;
+	color: #0065FC;
+	background-color : #DEEBFF; 
+	padding: 15px 18px 15px 17px;
+	border-radius: 25px;
+}
+
+.fa-heart
+{
+	font-size: 19px;
+	color: #0065FC;
+	background-color : #DEEBFF; 
+	padding: 17px 15px 15px 16px;
+	border-radius: 25px;
+}
+
+.fa-dog
+{
+	font-size: 21px;
+	color: #0065FC;
+	background-color : #DEEBFF; 
+	padding: 15px 14px 15px 15px;
+	border-radius: 25px;
+}
+.fa-star
+{
+	font-size: 12px;
+	color: #0065FC;
+
+}
+.fa-star-grey
+{
+	color: #F2F2F2;
+}
+
+.logo-filtre
+{
+	padding: 17px; /*ne pas faire avec padding je pense*/
+	background-color: #DEEBFF; 
+	border-radius: 22px;
 }
 
 																						/*HEBERGEMENTS*/
 
+#liste-hebergement
+{
+	display: flex;
+	flex-wrap: wrap;
+}
 
 #ville-recherche, #plus-populaires
 {
@@ -163,6 +257,7 @@ nav li
 {
 	width: 61.11%;
 	height: 33.23%;
+	margin-right: 40px;
 }
 
 .img-hebergement
@@ -183,7 +278,7 @@ nav li
 
 .resultat-recherche
 {
-	margin-left: -5px;
+	margin-left: -6px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -192,6 +287,8 @@ nav li
 	height: 199px;
 	border-radius: 16px;
 	background-color: white;
+	padding-top: 5px;
+    margin-top: 8px;
 }
 
 .description-hebergement
@@ -210,7 +307,6 @@ nav li
 
 #plus-populaires
 {
-	margin-left: 40px;
 	width: 29.17%;
 	height: 33.23%;
 }
@@ -226,6 +322,7 @@ nav li
 
 .resultat-populaires
 {
+	padding-left: 3px;
 	display: flex;
 	align-items: center;
 	width: 343px;
@@ -233,16 +330,22 @@ nav li
 	border-radius: 17px;
 	background-color: white;
 	margin-left: 0px;
+	padding-left: 4px;
 }
 
 
 																						/*ACTIVITES*/
 
 
-.resultat-activites
+.conteneur-activites
 {
 	display: flex;
 	flex-wrap: wrap;
+}
+.resultat-activite
+{
+	margin-left: 29px;
+	margin-right: 41px;
 }
 
 .img-activites-grandes
@@ -252,6 +355,7 @@ nav li
 	object-fit: cover;
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
+	margin-left: -29px;
 }
 
 .img-activites-fin-page
@@ -261,6 +365,7 @@ nav li
 	object-fit: cover;
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
+	margin-left: -29px;
 }
 
 .img-activites-moyenne
@@ -270,6 +375,7 @@ nav li
 	object-fit: cover;
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
+	margin-left: -29px;
 }
 
 .img-activites-petite
@@ -279,6 +385,7 @@ nav li
 	object-fit: cover;
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
+	margin-left: -29px;
 }
 
 
@@ -288,8 +395,10 @@ nav li
 .codex
 {
 	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 11.57%;
 	background-color: #F2F2F2;
-
 }
 
 ol
@@ -297,6 +406,7 @@ ol
 	display: flex;
 	flex-direction: column;
 	font-size: 0.8em;
+	padding-left: 0;
 }
 
 ol :hover
