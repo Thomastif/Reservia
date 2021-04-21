@@ -10,7 +10,9 @@
 	<body>
 		<header>
 			<div class="en-tete">
-				<img class="logo" src="images/logo/Reservia.png" alt="Logo Reservia"/> 
+				<div class="">
+					<img class="logo-reservia" src="images/logo/Reservia.png" alt="Logo Reservia"/> 
+				</div>
 				<nav>
 					<ul class="menu-principal"><!--Je mets la class nav pour ensuite déplacer le groupe avec flexbox-->
 						<li><a href="#liste-hebergement" class="navigation">Hébergements</a></li>
@@ -24,8 +26,6 @@
 
 			<form method="post" action="traitement.php">
 				<p>
-					<label for="localisation"><!--mettre logo localisation et zone "recherche"--></label>
-					<!--https://www.google.fr/maps/@46.8418571,2.5026947,6.71z-->
 					<a href=""><i class="fas fa-map-marker-alt"></i></a>
 					<input class="formulaire" type="text" name="ville" id="localisation" value="Marseille, France"> 
 					<a href=""><span class="Recherche">Rechercher</span></a>
@@ -55,7 +55,7 @@
 									<figcaption class="description-hebergement">
 										<p class="bold">Auberge la Cannebière</p> 
 										<p>Nuit à partir de <span class="bold">25€</span></p>
-										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey-star"></i>
 									</figcaption>
 								</figure>
 							</a>
@@ -65,7 +65,7 @@
 									<figcaption class="description-hebergement">
 										<p class="bold">Hôtel du port</p>
 										<p>Nuit à partir de 52<span class="bold">€</span></p>
-										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star star-grey"></i>
+										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
 									</figcaption>
 								</figure>
 							</a>
@@ -75,7 +75,7 @@
 									<figcaption class="description-hebergement">
 										<p class="bold">Hôtel Les mouettes</p> 
 										<p>Nuit à partir de 76<span class="bold">€</span></p>
-										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey-star"></i>
 									</figcaption>
 								</figure>
 							</a>
@@ -85,7 +85,7 @@
 									<figcaption class="description-hebergement">
 										<p class="bold">Hôtel de la mer</p> 
 										<p>Nuit à partir de 46<span class="bold">€</span></p>
-										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey-star"></i><i class="fas fa-star grey-star"></i>
 									</figcaption>
 								</figure>
 							</a>
@@ -95,7 +95,7 @@
 									<figcaption class="description-hebergement">
 										<p class="bold">Auberge Le Panier</p>
 										<p>Nuit à partir de <span class="bold">23€</span></p>
-										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey-star"></i>
 									</figcaption>
 								</figure>
 							</a>
@@ -115,7 +115,7 @@
 						</a>
 				</article>
 				<aside id="plus-populaires">
-					<h2>Les plus populaires <i class="fas fa-chart-line"></i></h2>
+						<h2 class="titre-populaire">Les plus populaires <i class="fas fa-chart-line"></i></h2>
 					<a href="">
 						<figure class="resultat-populaires">
 							<img src="images/hebergements/small/Soleil-Matin.jpg" alt="image Hôtel Le soleil du matin" class="img-plus-populaire">
@@ -132,7 +132,7 @@
 							<figcaption>
 								<p class="bold">Au coeur de l'eau <br>Chambres d'hôtes</p>
 								<p>Nuit à partir de 71<span class="bold">€</span></p>
-								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey-star"></i>
 							</figcaption>
 						</figure>
 					</a>
@@ -142,7 +142,7 @@
 							<figcaption>
 								<p class="bold">Hôtel Tout bleu et <br>Blanc</p>
 								<p>Nuit à partir de 68<span class="bold">€</span></p>
-								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey-star"></i>
 							</figcaption>
 						</figure>	
 					</a>
@@ -207,28 +207,30 @@
 			</div>
 		</section>
 		<footer>
-			<div class="codex">
-				<div class="a-propos">
-					<h3>A propos</h3>
-						<ol>
-							<li>Fonctionnement du site</li>
-							<li>Conditions générales de ventes</li>
-							<li>Données et confidentialité</li>
-						</ol>
-				</div>
-				<div class="hebergements">
-					<h3>Nos hébergements</h3>
-						<ol>
-							<li>Carte qualité</li>
-							<li>Soumettre votre hôtel</li>
-						</ol>
-				</div>
-				<div class="assistance">
-					<h3>Assistance</h3>
-						<ol>
-							<li>Centre d'aide</li>
-							<li>Nous contacter</li>
-						</ol>
+			<div class="codex-background">
+				<div class="conteneur-codex">
+					<div class="a-propos">
+						<h3>A propos</h3>
+							<ol>
+								<li class="liste-codex">Fonctionnement du site</li>
+								<li class="liste-codex">Conditions générales de ventes</li>
+								<li class="liste-codex">Données et confidentialité</li>
+							</ol>
+					</div>
+					<div class="hebergements">
+						<h3>Nos hébergements</h3>
+							<ol>
+								<li class="liste-codex">Carte qualité</li>
+								<li class="liste-codex">Soumettre votre hôtel</li>
+							</ol>
+					</div>
+					<div class="assistance">
+						<h3>Assistance</h3>
+							<ol>
+								<li class="liste-codex">Centre d'aide</li>
+								<li class="liste-codex">Nous contacter</li>
+							</ol>
+					</div>
 				</div>
 			</div>
 		</footer>

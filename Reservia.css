@@ -57,12 +57,18 @@ section
 {
 	margin-left: 47px;
 }
+
+.text-hebergement
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 																				
 
 																						/*EN-TETE*/
 
 
-.logo
+.logo-reservia
 {
 	width: 97px;
 	height: 45px;
@@ -72,32 +78,27 @@ section
 {
 	display: flex;
 	justify-content: space-between;
-
 }
 
 .menu-principal
 {
 	display: flex;
-	justify-content: flex-end;
-	/*mettre en haut a droite*/
-
+	justify-content: space-between;
 }
 .navigation
 {
 	border: solid 2px;
 	border-color: rgba(255,255,255,0);
-	padding-top: 20px; 	/*Décaler la bordure de 49px*/	
-	/*?????*/
+	padding: 20px 25px 0px 25px;
 	margin-top: -22px; 
 }
 
-nav li
+nav ul
 {
-	display: flex;
-	margin-right: 67px;
+	box-sizing: border-box;	
 }
 
-.navigation:hover /*ne marche pas comme ça mais marche avec .nav, mais cela le fait aussi sur s'inscrire. une fois fonctionelle le texte descend lorsqu'on le survole.*/
+.navigation:hover
 {
 	color:  #0065FC;
 	border-top: 2px solid #0065FC; 
@@ -108,6 +109,8 @@ nav li
 {
 	color: #0065FC;
 	font-weight: bold;
+	padding-left: 25px; 
+	margin-right: 67px;
 }
 
 																						/*FILTRES ET FORMULAIRE*/
@@ -119,8 +122,9 @@ nav li
 	border-style: solid;
 	border-width: 1px;
 	border-color: #F2F2F2;
-	padding: 14px 77px 14px 69px; /*METTRE EN width/height*/
-	border-radius: 15px;
+	padding: 13px 0px 13px 20px;
+	margin-left: -7px;
+
 }
 
 .formulaire:focus
@@ -136,12 +140,14 @@ nav li
 	padding: 14px 17px 14px 17px;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
+	margin-left: -7px;
 	
 }
 
 .liste-filtres
 {
 	display: flex;
+	align-items: center;
 }
 
 .filtres /*MODIF NOMS ???*/
@@ -159,8 +165,13 @@ nav li
 	border-style: solid;
 	border-color: #D9D9D9;
 	border-radius: 30px;
-	margin-top: -20px;/*essayer de remplacer par flexbox*/
 	padding-right: 30px;
+}
+
+.filtre:hover
+{
+	background-color: #0065FC;
+	color: #DEEBFF;
 }
 
 .fa-map-marker-alt
@@ -191,6 +202,7 @@ nav li
 	background-color : #DEEBFF; 
 	padding: 16px 16px 18px 16px;
 	border-radius: 25px;
+	margin-right: 10px;
 }
 
 .fa-child
@@ -200,6 +212,7 @@ nav li
 	background-color : #DEEBFF; 
 	padding: 15px 18px 15px 17px;
 	border-radius: 25px;
+	margin-right: 10px;
 }
 
 .fa-heart
@@ -209,6 +222,7 @@ nav li
 	background-color : #DEEBFF; 
 	padding: 17px 15px 15px 16px;
 	border-radius: 25px;
+	margin-right: 10px;
 }
 
 .fa-dog
@@ -218,6 +232,7 @@ nav li
 	background-color : #DEEBFF; 
 	padding: 15px 14px 15px 15px;
 	border-radius: 25px;
+	margin-right: 10px;
 }
 .fa-star
 {
@@ -225,9 +240,9 @@ nav li
 	color: #0065FC;
 
 }
-.fa-star-grey
+.grey-star
 {
-	color: #F2F2F2;
+	color: #999087;
 }
 
 .logo-filtre
@@ -289,6 +304,7 @@ nav li
 	background-color: white;
 	padding-top: 5px;
     margin-top: 8px;
+    box-shadow: 0.1px 0.1px 10px 0.1px grey;
 }
 
 .description-hebergement
@@ -311,6 +327,13 @@ nav li
 	height: 33.23%;
 }
 
+.titre-populaire
+{
+	display: flex;
+	justify-content: space-between;
+    width: 344px;
+}
+
 .img-plus-populaire
 {
 	width: 127px;
@@ -331,6 +354,7 @@ nav li
 	background-color: white;
 	margin-left: 0px;
 	padding-left: 4px;
+	box-shadow: 0.1px 0.1px 10px 0.1px grey;
 }
 
 
@@ -344,8 +368,11 @@ nav li
 }
 .resultat-activite
 {
-	margin-left: 29px;
-	margin-right: 41px;
+	margin-left: 1px;
+    margin-right: 41px;
+    padding-left: 28px;
+    border-radius: 15px;
+    box-shadow: 0.1px 0.1px 10px 0.1px grey;
 }
 
 .img-activites-grandes
@@ -392,13 +419,25 @@ nav li
 																						/*BAS DE PAGE*/
 
 
-.codex
+.codex-background
 {
-	display: flex;
-	justify-content: space-between;
 	width: 100%;
 	height: 11.57%;
 	background-color: #F2F2F2;
+}
+
+.conteneur-codex
+{
+	width: 1022px;
+	margin-left: 47px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.liste-codex
+{
+	padding-top: 4px;
+	padding-bottom: 8px;
 }
 
 ol
