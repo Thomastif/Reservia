@@ -57,12 +57,6 @@ section
 {
 	margin-left: 47px;
 }
-
-.text-hebergement
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
 																				
 
 																						/*EN-TETE*/
@@ -80,10 +74,11 @@ section
 	justify-content: space-between;
 }
 
-.menu-principal
+.menu-principal, .conteneur-navigation
 {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .navigation
 {
@@ -91,11 +86,6 @@ section
 	border-color: rgba(255,255,255,0);
 	padding: 20px 25px 0px 25px;
 	margin-top: -22px; 
-}
-
-nav ul
-{
-	box-sizing: border-box;	
 }
 
 .navigation:hover
@@ -112,6 +102,7 @@ nav ul
 	padding-left: 25px; 
 	margin-right: 67px;
 }
+
 
 																						/*FILTRES ET FORMULAIRE*/
 
@@ -144,13 +135,18 @@ nav ul
 	
 }
 
-.liste-filtres
+.logo-search
+{
+	display: none;
+}
+
+.conteneur-filtres
 {
 	display: flex;
 	align-items: center;
 }
 
-.filtres /*MODIF NOMS ???*/
+.liste-filtre /*MODIF NOMS ???*/
 {
 	display: flex;	
 	flex-wrap: wrap;
@@ -166,6 +162,9 @@ nav ul
 	border-color: #D9D9D9;
 	border-radius: 30px;
 	padding-right: 30px;
+	margin-right: 24px;
+	display: flex;
+	align-items: center;
 }
 
 .filtre:hover
@@ -193,6 +192,11 @@ nav ul
 	border-color: #D9D9D9;
 	border-radius: 25px;
 	padding: 5px 9px 5px 8px;
+}
+
+.texte-info
+{
+	margin-left: 10px;
 }
 
 .fa-money-bill-wave
@@ -284,11 +288,21 @@ nav ul
 	object-fit: cover;
 }
 
+.titre-hebergement
+{
+	margin-bottom: 6px;
+}
+
+.text-hebergement
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
 .Hebergements
 {
 	display: flex;
 	flex-wrap: wrap;
-
 }
 
 .resultat-recherche
@@ -299,12 +313,12 @@ nav ul
 	justify-content: center;
 	align-content: center;
 	width: 246px;
-	height: 199px;
+	height: 194px;
 	border-radius: 16px;
 	background-color: white;
-	padding-top: 5px;
     margin-top: 8px;
-    box-shadow: 0.1px 0.1px 10px 0.1px grey;
+    padding-bottom: 3px;
+    box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.20);
 }
 
 .description-hebergement
@@ -323,7 +337,7 @@ nav ul
 
 #plus-populaires
 {
-	width: 29.17%;
+	width: 28%;
 	height: 33.23%;
 }
 
@@ -332,6 +346,24 @@ nav ul
 	display: flex;
 	justify-content: space-between;
     width: 344px;
+}
+
+.conteneur-text-populaire
+{
+	margin-left: 20px;
+	height: 100%;
+	margin-top: 5px;
+}
+
+.nom-hebergement-populaire
+{
+	margin-bottom: 6px;
+}
+
+.text-populaires
+{
+	margin-top: 2px;
+	margin-bottom: 47px;
 }
 
 .img-plus-populaire
@@ -354,7 +386,7 @@ nav ul
 	background-color: white;
 	margin-left: 0px;
 	padding-left: 4px;
-	box-shadow: 0.1px 0.1px 10px 0.1px grey;
+    box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.20);
 }
 
 
@@ -372,7 +404,14 @@ nav ul
     margin-right: 41px;
     padding-left: 28px;
     border-radius: 15px;
-    box-shadow: 0.1px 0.1px 10px 0.1px grey;
+    box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.20);
+    margin-top: 58px;
+}
+
+.text-activite
+{
+	display: flex;
+	align-items: center;
 }
 
 .img-activites-grandes
@@ -388,7 +427,7 @@ nav ul
 .img-activites-fin-page
 {
 	width: 302px;
-	height: 140px;
+	height: 144px;
 	object-fit: cover;
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
@@ -428,7 +467,7 @@ nav ul
 
 .conteneur-codex
 {
-	width: 1022px;
+	width: 70.97%;
 	margin-left: 47px;
 	display: flex;
 	justify-content: space-between;
@@ -452,3 +491,210 @@ ol :hover
 {
 	text-decoration: underline;
 }
+
+
+																						/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1024px)
+{
+	
+	#plus-populaires
+	{
+		order: 1;
+		width: 40%;
+		margin-top: 15px;
+		margin-bottom: 20px;
+	}
+
+	#ville-recherche
+	{
+		order: 2; /*order pour mettre le plus populaire en avant*/
+		width: 88%;
+	}
+
+	.img-activites-grandes, .img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
+	{
+		height: 303px;
+	}
+
+	.double-activites
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.resultat-activite
+	{
+		margin-right: 17px;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	.filtre
+	{
+		margin-right: 10px;
+		margin-top: 15px;
+		padding-right: 15px;
+	}
+
+	#plus-populaires
+	{
+		width: 54%;
+	}
+
+	#ville-recherche
+	{
+		width: 82%
+	}
+
+	.conteneur-codex
+	{
+		width: 80%
+	}	
+
+	.img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
+	{
+	 	height: 111px;
+	}
+
+	.double-activites
+	{
+	 	flex-direction: column;
+	}
+
+	.conteneur-filtres
+	{
+		align-items: unset;
+		flex-direction: column; /*ceci est fait pour mettre en column "filtres" et les filtres*/
+	}
+
+	.liste-filtre
+	{
+		height: 20%;
+		margin: 0;
+ 		padding: 0; /*ces deux valeurs cancel le padding de base*/
+	}
+}
+
+@media screen and (max-width: 425px)
+{
+	body
+	{
+		margin: 0;
+	}
+
+	header
+	{
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+
+	section
+	{
+		margin: 0;
+	}
+
+	h1
+	{
+		width: 345px;
+	}
+
+	.menu-principal
+	{
+		width: 100%
+	}
+
+	.conteneur-navigation
+	{
+		order: 2;
+	}
+
+	.conteneur-sing-up
+	{
+		order: 1;
+	}
+
+	.conteneur-filtres
+	{
+		margin-left: 20px;
+	}
+
+	.info
+	{
+		margin-left: 20px;
+	}
+
+	.formulaire
+	{
+		padding-right: 15px; 
+	}
+
+	.Recherche
+	{
+		border-radius: 15px;
+		margin-left: -20px;
+	}
+
+	.text-search
+	{
+		display: none;
+	}
+
+	.logo-search
+	{
+		display: unset;
+	}
+
+	#ville-recherche
+	{
+		background-color: white;
+		padding: 0;
+		margin-left: 30px;
+	}
+
+	.resultat-recherche
+	{
+		width: 335px;
+		margin-right: 0px;
+	}
+
+	.img-hebergement
+	{
+		width: 325px;
+	}
+
+	.resultat-populaires
+	{
+		width: 334px;
+		margin-right: 0px;
+	}
+
+	#plus-populaires
+	{
+		border-radius: 0;
+		width: 100%;
+		padding-left: 12px;
+	}
+
+	#activites
+	{
+		margin-left: 30px;
+	}
+
+	.img-activites-grandes
+	{
+	 	height: 111px; /*voir avec mentor, normalement 134 px pour height mais je trouve ça un peux trop grand, et 111 se rapproche plus de la maquette*/
+	}
+
+	.conteneur-codex
+	{
+		justify-content: unset;
+		flex-direction: column;
+		margin-left: 34px;
+	}
+}
+
+/*
+*/
