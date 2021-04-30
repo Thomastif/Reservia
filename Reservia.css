@@ -80,6 +80,7 @@ section
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 .navigation
 {
 	border: solid 2px;
@@ -274,9 +275,10 @@ section
 
 #ville-recherche
 {
-	width: 61.11%;
+	width: 840px;
 	height: 33.23%;
 	margin-right: 40px;
+	margin-bottom: 20px;
 }
 
 .img-hebergement
@@ -286,11 +288,17 @@ section
 	border-top-right-radius: 14px;
 	border-top-left-radius: 14px;
 	object-fit: cover;
+	margin: auto;
 }
 
 .titre-hebergement
 {
 	margin-bottom: 6px;
+}
+
+.description-hebergement
+{
+	margin-left: 14px;
 }
 
 .text-hebergement
@@ -310,7 +318,6 @@ section
 	margin-left: -6px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 	align-content: center;
 	width: 246px;
 	height: 194px;
@@ -319,11 +326,6 @@ section
     margin-top: 8px;
     padding-bottom: 3px;
     box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.20);
-}
-
-.description-hebergement
-{
-	margin-left: -100px;
 }
 
 .Afficher-plus :hover
@@ -337,7 +339,7 @@ section
 
 #plus-populaires
 {
-	width: 28%;
+	width: 385.5px;
 	height: 33.23%;
 }
 
@@ -497,11 +499,30 @@ ol :hover
 
 @media screen and (max-width: 1024px)
 {
-	
+	.conteneur-filtres
+	{
+		align-items: unset;
+		flex-direction: column; /*ceci est fait pour mettre en column "filtres" et les filtres*/
+	}
+
+	.liste-filtre
+	{
+		height: 20%;
+		margin: 0;
+ 		padding: 0; /*ces deux valeurs cancel le padding de base*/
+	}
+
+	.filtre
+	{
+		margin-right: 10px;
+		margin-top: 15px;
+		padding-right: 15px;
+	}
+
 	#plus-populaires
 	{
 		order: 1;
-		width: 40%;
+		width: 384.5px;
 		margin-top: 15px;
 		margin-bottom: 20px;
 	}
@@ -514,7 +535,7 @@ ol :hover
 
 	.img-activites-grandes, .img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
 	{
-		height: 303px;
+		height: 203px;
 	}
 
 	.double-activites
@@ -532,16 +553,21 @@ ol :hover
 
 @media screen and (max-width: 768px)
 {
-	.filtre
+
+	.conteneur-sing-up
 	{
-		margin-right: 10px;
-		margin-top: 15px;
-		padding-right: 15px;
+		margin-right: 0;
+		padding: 0;
+	}
+
+	.sing-up
+	{
+		margin-right: 26px;
 	}
 
 	#plus-populaires
 	{
-		width: 54%;
+		width: 381px;
 	}
 
 	#ville-recherche
@@ -554,6 +580,11 @@ ol :hover
 		width: 80%
 	}	
 
+	.img-activites-grandes
+	{
+		height: 303px;
+	}
+
 	.img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
 	{
 	 	height: 111px;
@@ -563,23 +594,11 @@ ol :hover
 	{
 	 	flex-direction: column;
 	}
-
-	.conteneur-filtres
-	{
-		align-items: unset;
-		flex-direction: column; /*ceci est fait pour mettre en column "filtres" et les filtres*/
-	}
-
-	.liste-filtre
-	{
-		height: 20%;
-		margin: 0;
- 		padding: 0; /*ces deux valeurs cancel le padding de base*/
-	}
 }
 
-@media screen and (max-width: 425px)
+@media screen and (max-width: 600px)
 {
+
 	body
 	{
 		margin: 0;
@@ -587,13 +606,21 @@ ol :hover
 
 	header
 	{
-		margin-left: 20px;
-		margin-top: 20px;
+		margin: 0;
 	}
-
 	section
 	{
 		margin: 0;
+	}
+
+	.en-tete
+	{
+		flex-direction: column;
+	}
+
+	.text-en-tete
+	{
+		margin-left: 5%;
 	}
 
 	h1
@@ -601,40 +628,90 @@ ol :hover
 		width: 345px;
 	}
 
+	h2
+	{
+		width: 335px;
+	}
+	
 	.menu-principal
 	{
 		width: 100%
 	}
 
+	.logo-reservia
+	{
+		margin-left: 20px;
+		margin-top: 8px;
+	}
+
 	.conteneur-navigation
 	{
 		order: 2;
+		padding-left: 0;
+	    margin-top: 25px;
+	    margin-left: auto;
+   		margin-right: auto;
+  		width: 477px;
+	}
+
+	.navigation
+	{
+		padding-top: 0;
+		padding-bottom: 10px;
+		padding-left: 47px;
+		padding-right: 48px;
+		border-bottom-color: #C4C2C0;
+	}
+
+	.navigation:hover
+	{
+		color:  #0065FC;
+		border-top: white;
+		border-bottom: 2px solid #0065FC; 
 	}
 
 	.conteneur-sing-up
 	{
 		order: 1;
+		position: absolute;
+		top: 10px; 
+		right: 0px;
 	}
 
-	.conteneur-filtres
+	.zone-recherche
 	{
-		margin-left: 20px;
-	}
-
-	.info
-	{
-		margin-left: 20px;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 
 	.formulaire
 	{
-		padding-right: 15px; 
+		padding-right: 80px; 
 	}
 
 	.Recherche
 	{
 		border-radius: 15px;
 		margin-left: -20px;
+	}
+
+	.conteneur-filtres
+	{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.info
+	{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.texte-info
+	{
+
 	}
 
 	.text-search
@@ -647,40 +724,71 @@ ol :hover
 		display: unset;
 	}
 
+
 	#ville-recherche
 	{
 		background-color: white;
 		padding: 0;
-		margin-left: 30px;
+		margin-right: auto;
+		margin-left: auto;
+
 	}
 
-	.resultat-recherche
+	.Hebergements
 	{
 		width: 335px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.resultat-recherche
+	{
+		width: 334px;
 		margin-right: 0px;
 	}
 
 	.img-hebergement
 	{
-		width: 325px;
+		width: 97%;
 	}
 
 	.resultat-populaires
 	{
 		width: 334px;
-		margin-right: 0px;
+		margin-right: auto;
+		margin-left: auto;
+
+	}
+	.titre-populaire
+	{
+		margin-left: 20px;
 	}
 
 	#plus-populaires
 	{
 		border-radius: 0;
 		width: 100%;
-		padding-left: 12px;
+		padding-left: 0px;
 	}
 
-	#activites
+	.titre-activites
 	{
-		margin-left: 30px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.conteneur-activites
+	{
+		justify-content: center;
+	}
+
+	.resultat-activite
+	{
+		margin-right: 0;
+	}
+
+	.img-activites-grandes, .img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
+	{
+		width: 335px;
 	}
 
 	.img-activites-grandes
