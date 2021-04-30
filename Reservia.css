@@ -147,14 +147,13 @@ section
 	align-items: center;
 }
 
-.liste-filtre /*MODIF NOMS ???*/
+.liste-filtre 
 {
 	display: flex;	
 	flex-wrap: wrap;
-	/*trouver un moyen de mettre sur la meme ligne*/
 }
 
-.filtre /*MODIF NOMS ???*/
+.filtre 
 {
 	font-weight: bold;
 	font-size: 0.9em;
@@ -341,6 +340,8 @@ section
 {
 	width: 385.5px;
 	height: 33.23%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .titre-populaire
@@ -519,6 +520,16 @@ ol :hover
 		padding-right: 15px;
 	}
 
+	.Hebergements
+	{
+		justify-content: center;
+	}
+
+	.resultat-recherche
+	{
+		margin-right: 25px;
+	}
+
 	#plus-populaires
 	{
 		order: 1;
@@ -533,15 +544,31 @@ ol :hover
 		width: 88%;
 	}
 
+	.conteneur-activites
+	{
+		max-width: 700px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
 	.img-activites-grandes, .img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
 	{
 		height: 203px;
 	}
 
+	.img-activites-grandes
+	{
+		height: 303px;
+	}
+
+	.img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
+	{
+	 	height: 111px;
+	}
+
 	.double-activites
 	{
-		display: flex;
-		flex-wrap: wrap;
+	 	flex-direction: column;
 	}
 
 	.resultat-activite
@@ -575,25 +602,16 @@ ol :hover
 		width: 82%
 	}
 
+	.conteneur-activites
+	{
+		justify-content: center;
+	}
+
 	.conteneur-codex
 	{
 		width: 80%
 	}	
 
-	.img-activites-grandes
-	{
-		height: 303px;
-	}
-
-	.img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
-	{
-	 	height: 111px;
-	}
-
-	.double-activites
-	{
-	 	flex-direction: column;
-	}
 }
 
 @media screen and (max-width: 600px)
