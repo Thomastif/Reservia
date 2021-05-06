@@ -12,8 +12,9 @@
 	font-family: 'Raleway', "Arial Black", Arial;
 }
 
-ul, ol {
-list-style-type: none;
+ul, ol 
+{
+	list-style-type: none;
 }
 
 h1
@@ -93,7 +94,6 @@ section
 {
 	color:  #0065FC;
 	border-top: 2px solid #0065FC; 
-	/*?????*/
 }
 
 .sing-up
@@ -251,7 +251,7 @@ section
 
 .logo-filtre
 {
-	padding: 17px; /*ne pas faire avec padding je pense*/
+	padding: 17px; 
 	background-color: #DEEBFF; 
 	border-radius: 22px;
 }
@@ -811,7 +811,7 @@ ol :hover
 
 	.img-activites-grandes
 	{
-	 	height: 111px; /*voir avec mentor, normalement 134 px pour height mais je trouve ça un peux trop grand, et 111 se rapproche plus de la maquette*/
+	 	height: 111px; 
 	}
 
 	.conteneur-codex
@@ -821,6 +821,52 @@ ol :hover
 		margin-left: 34px;
 	}
 }
+
+@media screen and (max-width: 374px)
+{
+	.navigation
+	{
+		padding-left: 34px;
+		padding-right: 33px;
+	}
+
+	.formulaire 
+	{
+    padding-right: 40px;
+	}
+
+	.titre-populaire
+	{
+		width: 290px;
+	}
+
+	.resultat-populaires 
+	{
+    width: 300px;
+	}
+
+	.resultat-recherche 
+	{
+ 	   width: 300px;
+ 	}
+
+ 	#ville-recherche
+ 	{
+ 		width: 100%;
+ 		margin-right: 0;
+ 		margin-left: 0;
+ 	}
+
+ 	.Hebergements
+ 	{
+ 		width: 300px;
+ 	}
+
+ 	.img-activites-grandes, .img-activites-fin-page, .img-activites-moyenne, .img-activites-petite
+	{
+		width: 300px;
+	}
+ }
 
 /*
 */
